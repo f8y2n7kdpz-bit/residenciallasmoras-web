@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Galindo Pérez;Juan Cruz;Ing.;;
+FN:Ing. Juan Cruz Galindo Pérez
+ORG:Las Moras Constructora
+TEL;TYPE=CELL,VOICE:+523222366462
+EMAIL;TYPE=INTERNET:juan@residenciallasmoras.com
+URL:https://www.residenciallasmoras.com
+ADR;TYPE=WORK:;;Zapotiltic;Jalisco;;;México
+NOTE:Las Moras Constructora — Raíces firmes. Hogares que crecen.
+END:VCARD
