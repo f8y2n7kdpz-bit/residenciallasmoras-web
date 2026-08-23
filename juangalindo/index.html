@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ing. Juan Cruz Galindo Pérez · Las Moras Constructora</title>
+<meta name="description" content="Tarjeta de presentación digital de Ing. Juan Cruz Galindo Pérez — Las Moras Constructora, Zapotiltic, Jalisco.">
+<meta name="theme-color" content="#2E203F">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2E203F;        /* Morado Marca */
+    --violet:#6F4D98;     /* Morado Vivo */
+    --lilac:#B49FCE;      /* Morado Suave */
+    --mist:#E6DFEF;       /* Lavanda Neblina */
+    --stone:#605B67;      /* Piedra */
+    --cream:#FAF8F6;      /* Crema */
+    --terracotta:#B8732E; /* Acento restringido */
+    --radius-lg:22px;
+    --radius-md:16px;
+    --safe-t:env(safe-area-inset-top,0px);
+    --safe-b:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Archivo',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;}
+  .page{
+    max-width:460px;
+    margin:0 auto;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:var(--cream);
+    box-shadow:0 0 60px rgba(46,32,63,0.08);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--cream);
+    padding:calc(28px + var(--safe-t)) 26px 56px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(250,248,246,0.05) 0px, rgba(250,248,246,0.05) 1px, transparent 1px, transparent 28px),
+      repeating-linear-gradient(90deg, rgba(250,248,246,0.05) 0px, rgba(250,248,246,0.05) 1px, transparent 1px, transparent 28px);
+    z-index:0;
+  }
+  .hero-mark{
+    position:absolute;
+    top:-40px; right:-60px;
+    width:260px; height:auto;
+    color:var(--cream);
+    opacity:0.07;
+    transform:rotate(6deg);
+    z-index:0;
+  }
+  .hero-top{
+    position:relative; z-index:1;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .avatar{
+    width:64px; height:64px;
+    border-radius:50%;
+    border:1.6px solid var(--lilac);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Big Shoulders',sans-serif;
+    font-weight:700;
+    font-size:24px;
+    letter-spacing:0.5px;
+    color:var(--cream);
+    flex:none;
+  }
+  .brandmark{
+    width:46px; height:auto;
+    color:var(--lilac);
+    flex:none;
+  }
+  .hero-top .divider-dot{
+    width:4px;height:4px;border-radius:50%;
+    background:var(--lilac);
+    opacity:0.6;
+  }
+  .hero-name{
+    position:relative; z-index:1;
+    font-family:'Big Shoulders',sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:clamp(28px,8vw,36px);
+    line-height:1.04;
+    letter-spacing:0.3px;
+    margin:22px 0 0;
+  }
+  .hero-role{
+    position:relative; z-index:1;
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .hero-role span{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--mist);
+  }
+  .hero-rule{
+    width:34px; height:3px;
+    background:var(--terracotta);
+    border-radius:2px;
+    flex:none;
+  }
+  .hero-tagline{
+    position:relative; z-index:1;
+    margin-top:16px;
+    font-size:13.5px;
+    font-style:italic;
+    color:var(--lilac);
+  }
+
+  /* ---------- CTA STACK ---------- */
+  .cta-wrap{
+    position:relative;
+    margin:-30px 20px 0;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    width:100%;
+    padding:16px 18px;
+    border-radius:var(--radius-md);
+    font-size:15.5px;
+    font-weight:700;
+    border:none;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:active{ transform:scale(0.97); }
+  .btn svg{ width:19px; height:19px; flex:none; }
+  .btn-primary{
+    background:var(--violet);
+    color:var(--cream);
+    box-shadow:0 10px 24px -8px rgba(111,77,152,0.55);
+  }
+  .btn-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .btn-secondary{
+    background:var(--cream);
+    color:var(--ink);
+    border:1.4px solid var(--lilac);
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding:26px 20px 0; }
+  .eyebrow{
+    font-family:'Big Shoulders',sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:13px;
+    color:var(--violet);
+    margin:0 0 12px;
+  }
+
+  .contact-card{
+    background:var(--mist);
+    border-radius:var(--radius-lg);
+    padding:6px;
+  }
+  .contact-row{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:14px 12px;
+    border-radius:14px;
+  }
+  .contact-row + .contact-row{
+    border-top:1px solid rgba(46,32,63,0.08);
+  }
+  .contact-icon{
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    flex:none;
+    color:var(--violet);
+  }
+  .contact-icon svg{ width:18px;height:18px; }
+  .contact-text{ min-width:0; }
+  .contact-label{
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--stone);
+    margin:0 0 2px;
+  }
+  .contact-value{
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--ink);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .map-frame{
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    border:1.4px solid var(--mist);
+    height:190px;
+    background:var(--mist);
+  }
+  .map-frame iframe{ width:100%; height:100%; border:0; display:block; }
+  .address{
+    margin:14px 0 16px;
+    font-size:14px;
+    color:var(--stone);
+    line-height:1.5;
+  }
+  .address strong{ color:var(--ink); display:block; font-size:14.5px; margin-bottom:2px;}
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    margin-top:30px;
+    padding:26px 20px calc(30px + var(--safe-b));
+    text-align:center;
+  }
+  .footer-rule{
+    width:40px;height:2px;
+    background:var(--lilac);
+    margin:0 auto 18px;
+    border-radius:2px;
+  }
+  .footer-mark{ width:34px;height:auto;color:var(--ink);margin:0 auto 10px;}
+  .footer-brand{
+    font-family:'Big Shoulders',sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:17px;
+    letter-spacing:0.5px;
+    color:var(--ink);
+  }
+  .footer-loc{
+    font-size:12.5px;
+    color:var(--stone);
+    margin-top:4px;
+  }
+  .footer-site{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:16px;
+    font-size:13.5px;
+    font-weight:700;
+    color:var(--violet);
+    border-bottom:1.4px solid var(--lilac);
+    padding-bottom:2px;
+  }
+  .footer-site svg{ width:13px;height:13px; }
+  .footer-tagline{
+    margin-top:20px;
+    font-size:12px;
+    font-style:italic;
+    color:var(--lilac);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <svg class="hero-mark" viewBox="0 0 734 571" aria-hidden="true"><g transform="translate(0,571) scale(0.1,-0.1)" fill="currentColor" stroke="none"><path d="M5815 5618 c-44 -50 -211 -223 -370 -383 -482 -482 -654 -695 -803 -992 -64 -126 -118 -282 -137 -391 -28 -159 -14 -378 35 -534 l18 -58 -29 21 c-51 36 -213 108 -279 123 -82 20 -205 20 -293 1 -173 -36 -340 -187 -404 -362 -52 -143 -50 -269 7 -390 67 -145 197 -232 389 -262 35 -6 66 -12 68 -14 15 -16 -64 -318 -98 -374 -32 -52 -317 -257 -589 -423 -342 -210 -747 -413 -1145 -575 -71 -30 -131 -52 -133 -50 -2 1 14 38 36 81 22 44 61 126 87 184 26 58 55 113 64 123 8 10 77 50 152 88 405 205 677 464 853 809 67 131 107 244 142 402 26 116 28 138 28 378 1 280 -6 336 -69 585 -94 368 -288 753 -540 1071 -129 163 -259 305 -266 291 -4 -7 -14 -65 -23 -129 -35 -247 -111 -410 -424 -908 -385 -612 -510 -888 -567 -1255 -40 -254 11 -559 136 -807 66 -131 194 -310 302 -425 l40 -42 -52 -108 c-65 -136 -225 -403 -271 -455 -31 -34 -52 -45 -170 -84 -349 -117 -847 -248 -1245 -329 l-260 -52 -3 -187 c-2 -128 1 -186 8 -186 21 0 424 91 585 132 452 114 1087 322 1461 478 160 66 164 67 329 46 61 -8 187 -20 280 -26 94 -7 173 -15 176 -18 3 -4 16 -33 29 -65 105 -266 498 -338 787 -145 213 143 300 356 221 539 -24 57 -112 144 -191 189 -75 44 -200 80 -294 87 -46 3 -83 9 -83 12 0 23 83 33 325 41 143 5 307 12 365 16 l105 6 65 -98 c240 -367 627 -545 1128 -520 293 15 553 80 860 214 308 135 636 370 827 592 169 198 274 383 320 564 26 103 43 236 31 236 -4 0 -47 -14 -94 -31 -79 -28 -101 -32 -237 -36 -145 -5 -381 8 -760 42 -1250 111 -1838 -54 -2089 -586 -25 -52 -48 -106 -51 -121 l-7 -28 -175 0 -175 0 199 159 c404 322 711 646 951 1003 61 90 69 94 227 102 293 15 576 151 767 369 185 210 295 482 355 874 24 156 24 591 -1 768 -37 273 -107 574 -190 815 l-32 95 -65 3 -64 3 -80 -93z m168 -155 c115 -368 168 -705 168 -1058 0 -224 -11 -344 -46 -521 -102 -509 -363 -831 -770 -949 -101 -29 -372 -59 -408 -46 -48 18 -177 220 -243 378 -59 142 -78 239 -77 398 0 117 5 156 26 237 49 184 147 385 284 576 106 149 265 325 615 680 202 205 375 384 384 397 9 14 20 25 24 25 3 0 23 -53 43 -117z m-3272 -855 c250 -311 432 -675 529 -1058 125 -493 73 -981 -141 -1339 -74 -121 -121 -183 -219 -285 -164 -170 -327 -287 -572 -408 -86 -43 -159 -82 -163 -87 -3 -6 -36 22 -72 62 -176 192 -299 380 -367 561 -29 78 -72 265 -81 356 -9 92 10 263 46 410 70 285 177 501 544 1090 238 383 345 591 386 752 7 26 16 48 20 48 4 0 45 -46 90 -102z m1542 -1325 c79 -23 204 -89 252 -134 132 -122 109 -307 -59 -467 -223 -211 -547 -241 -721 -67 -55 54 -72 87 -84 162 -23 142 26 290 129 393 125 125 303 167 483 113z m486 -357 c12 -18 21 -42 21 -53 0 -44 -187 -270 -408 -493 -139 -141 -163 -161 -158 -135 3 17 8 59 11 95 l6 65 107 52 c217 107 350 260 385 443 6 33 12 60 13 60 2 0 12 -15 23 -34z m-419 -762 c-227 -228 -434 -400 -746 -619 -107 -75 -192 -141 -189 -146 4 -5 93 -10 198 -11 l192 -2 -225 -5 -225 -6 -55 -31 c-30 -17 -122 -71 -205 -118 -335 -194 -898 -457 -1305 -609 -498 -186 -1254 -406 -1617 -471 l-33 -5 0 68 0 68 43 7 c82 13 374 78 577 128 272 67 502 132 767 219 180 58 224 76 250 102 17 18 72 97 122 177 50 80 95 152 101 160 12 17 -85 -173 -138 -269 -41 -75 -57 -75 148 1 928 344 1727 814 2330 1371 69 64 127 116 130 117 3 0 -51 -57 -120 -126z m1985 -29 c245 -22 372 -28 602 -29 203 -1 293 -4 293 -12 0 -25 -45 -144 -82 -219 -88 -176 -273 -397 -452 -541 -339 -274 -775 -469 -1177 -528 -123 -18 -381 -21 -495 -5 -298 41 -563 205 -721 446 -80 122 -85 137 -68 214 29 141 103 276 213 391 153 161 438 271 796 308 44 5 239 7 431 5 281 -2 411 -8 660 -30z m-2833 -1044 c140 -36 257 -111 299 -192 28 -56 26 -149 -6 -218 -52 -112 -209 -228 -352 -261 -184 -42 -357 19 -426 150 -27 51 -28 61 -25 150 3 84 7 104 36 162 51 105 146 181 265 213 72 19 121 18 209 -4z m-570 -143 c-21 -40 -43 -88 -50 -105 -9 -28 -16 -33 -44 -33 -46 0 -199 20 -211 27 -7 4 317 178 341 182 1 1 -15 -32 -36 -71z"/></g></svg>
+
+    <div class="hero-top">
+      <div class="avatar">JG</div>
+      <svg class="brandmark" viewBox="0 0 734 571" role="img" aria-label="Isotipo Las Moras Constructora"><g transform="translate(0,571) scale(0.1,-0.1)" fill="currentColor" stroke="none"><path d="M5815 5618 c-44 -50 -211 -223 -370 -383 -482 -482 -654 -695 -803 -992 -64 -126 -118 -282 -137 -391 -28 -159 -14 -378 35 -534 l18 -58 -29 21 c-51 36 -213 108 -279 123 -82 20 -205 20 -293 1 -173 -36 -340 -187 -404 -362 -52 -143 -50 -269 7 -390 67 -145 197 -232 389 -262 35 -6 66 -12 68 -14 15 -16 -64 -318 -98 -374 -32 -52 -317 -257 -589 -423 -342 -210 -747 -413 -1145 -575 -71 -30 -131 -52 -133 -50 -2 1 14 38 36 81 22 44 61 126 87 184 26 58 55 113 64 123 8 10 77 50 152 88 405 205 677 464 853 809 67 131 107 244 142 402 26 116 28 138 28 378 1 280 -6 336 -69 585 -94 368 -288 753 -540 1071 -129 163 -259 305 -266 291 -4 -7 -14 -65 -23 -129 -35 -247 -111 -410 -424 -908 -385 -612 -510 -888 -567 -1255 -40 -254 11 -559 136 -807 66 -131 194 -310 302 -425 l40 -42 -52 -108 c-65 -136 -225 -403 -271 -455 -31 -34 -52 -45 -170 -84 -349 -117 -847 -248 -1245 -329 l-260 -52 -3 -187 c-2 -128 1 -186 8 -186 21 0 424 91 585 132 452 114 1087 322 1461 478 160 66 164 67 329 46 61 -8 187 -20 280 -26 94 -7 173 -15 176 -18 3 -4 16 -33 29 -65 105 -266 498 -338 787 -145 213 143 300 356 221 539 -24 57 -112 144 -191 189 -75 44 -200 80 -294 87 -46 3 -83 9 -83 12 0 23 83 33 325 41 143 5 307 12 365 16 l105 6 65 -98 c240 -367 627 -545 1128 -520 293 15 553 80 860 214 308 135 636 370 827 592 169 198 274 383 320 564 26 103 43 236 31 236 -4 0 -47 -14 -94 -31 -79 -28 -101 -32 -237 -36 -145 -5 -381 8 -760 42 -1250 111 -1838 -54 -2089 -586 -25 -52 -48 -106 -51 -121 l-7 -28 -175 0 -175 0 199 159 c404 322 711 646 951 1003 61 90 69 94 227 102 293 15 576 151 767 369 185 210 295 482 355 874 24 156 24 591 -1 768 -37 273 -107 574 -190 815 l-32 95 -65 3 -64 3 -80 -93z m168 -155 c115 -368 168 -705 168 -1058 0 -224 -11 -344 -46 -521 -102 -509 -363 -831 -770 -949 -101 -29 -372 -59 -408 -46 -48 18 -177 220 -243 378 -59 142 -78 239 -77 398 0 117 5 156 26 237 49 184 147 385 284 576 106 149 265 325 615 680 202 205 375 384 384 397 9 14 20 25 24 25 3 0 23 -53 43 -117z m-3272 -855 c250 -311 432 -675 529 -1058 125 -493 73 -981 -141 -1339 -74 -121 -121 -183 -219 -285 -164 -170 -327 -287 -572 -408 -86 -43 -159 -82 -163 -87 -3 -6 -36 22 -72 62 -176 192 -299 380 -367 561 -29 78 -72 265 -81 356 -9 92 10 263 46 410 70 285 177 501 544 1090 238 383 345 591 386 752 7 26 16 48 20 48 4 0 45 -46 90 -102z m1542 -1325 c79 -23 204 -89 252 -134 132 -122 109 -307 -59 -467 -223 -211 -547 -241 -721 -67 -55 54 -72 87 -84 162 -23 142 26 290 129 393 125 125 303 167 483 113z m486 -357 c12 -18 21 -42 21 -53 0 -44 -187 -270 -408 -493 -139 -141 -163 -161 -158 -135 3 17 8 59 11 95 l6 65 107 52 c217 107 350 260 385 443 6 33 12 60 13 60 2 0 12 -15 23 -34z m-419 -762 c-227 -228 -434 -400 -746 -619 -107 -75 -192 -141 -189 -146 4 -5 93 -10 198 -11 l192 -2 -225 -5 -225 -6 -55 -31 c-30 -17 -122 -71 -205 -118 -335 -194 -898 -457 -1305 -609 -498 -186 -1254 -406 -1617 -471 l-33 -5 0 68 0 68 43 7 c82 13 374 78 577 128 272 67 502 132 767 219 180 58 224 76 250 102 17 18 72 97 122 177 50 80 95 152 101 160 12 17 -85 -173 -138 -269 -41 -75 -57 -75 148 1 928 344 1727 814 2330 1371 69 64 127 116 130 117 3 0 -51 -57 -120 -126z m1985 -29 c245 -22 372 -28 602 -29 203 -1 293 -4 293 -12 0 -25 -45 -144 -82 -219 -88 -176 -273 -397 -452 -541 -339 -274 -775 -469 -1177 -528 -123 -18 -381 -21 -495 -5 -298 41 -563 205 -721 446 -80 122 -85 137 -68 214 29 141 103 276 213 391 153 161 438 271 796 308 44 5 239 7 431 5 281 -2 411 -8 660 -30z m-2833 -1044 c140 -36 257 -111 299 -192 28 -56 26 -149 -6 -218 -52 -112 -209 -228 -352 -261 -184 -42 -357 19 -426 150 -27 51 -28 61 -25 150 3 84 7 104 36 162 51 105 146 181 265 213 72 19 121 18 209 -4z m-570 -143 c-21 -40 -43 -88 -50 -105 -9 -28 -16 -33 -44 -33 -46 0 -199 20 -211 27 -7 4 317 178 341 182 1 1 -15 -32 -36 -71z"/></g></svg>
+    </div>
+
+    <h1 class="hero-name">Ing. Juan Cruz<br>Galindo Pérez</h1>
+    <div class="hero-role">
+      <span class="hero-rule" aria-hidden="true" style="width:26px;height:2px;background:var(--terracotta);border-radius:2px;"></span>
+      <span>Las Moras Constructora</span>
+    </div>
+    <p class="hero-tagline">Raíces firmes. Hogares que crecen.</p>
+  </header>
+
+  <!-- CTA STACK -->
+  <div class="cta-wrap">
+    <a id="save-contact" class="btn btn-primary" href="#" download="Juan_Cruz_Galindo_Perez.vcf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9.5" cy="10.5" r="2.2"/><path d="M6 17c.7-2.2 2.3-3.3 3.5-3.3S12.3 14.8 13 17"/><path d="M16 9h3M17.5 7.5v3"/></svg>
+      Guardar contacto
+    </a>
+    <div class="btn-row">
+      <a class="btn btn-secondary" id="whatsapp-link" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.15-3.45A7.9 7.9 0 1 1 8.6 19L4 20Z"/><circle cx="9" cy="12" r="0.9" fill="currentColor" stroke="none"/><circle cx="12.2" cy="12" r="0.9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="12" r="0.9" fill="currentColor" stroke="none"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-secondary" id="call-link" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.2l1.3 4.5-2 1.3a13 13 0 0 0 6.7 6.7l1.3-2 4.5 1.3V19a2 2 0 0 1-2.2 2C10.7 20.4 3.6 13.3 3 6.2A2 2 0 0 1 5 4Z"/></svg>
+        Llamar
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section>
+    <p class="eyebrow">Contacto directo</p>
+    <div class="contact-card">
+      <a class="contact-row" id="email-link" href="#">
+        <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg></span>
+        <span class="contact-text">
+          <span class="contact-label">Correo</span>
+          <span class="contact-value">juan@residenciallasmoras.com</span>
+        </span>
+      </a>
+      <a class="contact-row" id="phone-link" href="#">
+        <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.2l1.3 4.5-2 1.3a13 13 0 0 0 6.7 6.7l1.3-2 4.5 1.3V19a2 2 0 0 1-2.2 2C10.7 20.4 3.6 13.3 3 6.2A2 2 0 0 1 5 4Z"/></svg></span>
+        <span class="contact-text">
+          <span class="contact-label">Teléfono directo</span>
+          <span class="contact-value">322 236 6462</span>
+        </span>
+      </a>
+      <a class="contact-row" href="tel:+523418867551">
+        <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></span>
+        <span class="contact-text">
+          <span class="contact-label">Oficina Las Moras</span>
+          <span class="contact-value">341 886 7551</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section>
+    <p class="eyebrow">Cómo llegar</p>
+    <div class="map-frame">
+      <iframe
+        src="https://maps.google.com/maps?q=19.631712,-103.434620&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación de Las Moras Constructora en Zapotiltic, Jalisco">
+      </iframe>
+    </div>
+    <p class="address">
+      <strong>Las Moras Constructora</strong>
+      Zapotiltic, Jalisco, México
+    </p>
+    <a class="btn btn-secondary" style="margin-bottom:6px;" href="https://www.google.com/maps/dir/?api=1&destination=19.631712,-103.434620" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+      Cómo llegar
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-rule"></div>
+    <svg class="footer-mark" viewBox="0 0 734 571" aria-hidden="true"><g transform="translate(0,571) scale(0.1,-0.1)" fill="currentColor" stroke="none"><path d="M5815 5618 c-44 -50 -211 -223 -370 -383 -482 -482 -654 -695 -803 -992 -64 -126 -118 -282 -137 -391 -28 -159 -14 -378 35 -534 l18 -58 -29 21 c-51 36 -213 108 -279 123 -82 20 -205 20 -293 1 -173 -36 -340 -187 -404 -362 -52 -143 -50 -269 7 -390 67 -145 197 -232 389 -262 35 -6 66 -12 68 -14 15 -16 -64 -318 -98 -374 -32 -52 -317 -257 -589 -423 -342 -210 -747 -413 -1145 -575 -71 -30 -131 -52 -133 -50 -2 1 14 38 36 81 22 44 61 126 87 184 26 58 55 113 64 123 8 10 77 50 152 88 405 205 677 464 853 809 67 131 107 244 142 402 26 116 28 138 28 378 1 280 -6 336 -69 585 -94 368 -288 753 -540 1071 -129 163 -259 305 -266 291 -4 -7 -14 -65 -23 -129 -35 -247 -111 -410 -424 -908 -385 -612 -510 -888 -567 -1255 -40 -254 11 -559 136 -807 66 -131 194 -310 302 -425 l40 -42 -52 -108 c-65 -136 -225 -403 -271 -455 -31 -34 -52 -45 -170 -84 -349 -117 -847 -248 -1245 -329 l-260 -52 -3 -187 c-2 -128 1 -186 8 -186 21 0 424 91 585 132 452 114 1087 322 1461 478 160 66 164 67 329 46 61 -8 187 -20 280 -26 94 -7 173 -15 176 -18 3 -4 16 -33 29 -65 105 -266 498 -338 787 -145 213 143 300 356 221 539 -24 57 -112 144 -191 189 -75 44 -200 80 -294 87 -46 3 -83 9 -83 12 0 23 83 33 325 41 143 5 307 12 365 16 l105 6 65 -98 c240 -367 627 -545 1128 -520 293 15 553 80 860 214 308 135 636 370 827 592 169 198 274 383 320 564 26 103 43 236 31 236 -4 0 -47 -14 -94 -31 -79 -28 -101 -32 -237 -36 -145 -5 -381 8 -760 42 -1250 111 -1838 -54 -2089 -586 -25 -52 -48 -106 -51 -121 l-7 -28 -175 0 -175 0 199 159 c404 322 711 646 951 1003 61 90 69 94 227 102 293 15 576 151 767 369 185 210 295 482 355 874 24 156 24 591 -1 768 -37 273 -107 574 -190 815 l-32 95 -65 3 -64 3 -80 -93z m168 -155 c115 -368 168 -705 168 -1058 0 -224 -11 -344 -46 -521 -102 -509 -363 -831 -770 -949 -101 -29 -372 -59 -408 -46 -48 18 -177 220 -243 378 -59 142 -78 239 -77 398 0 117 5 156 26 237 49 184 147 385 284 576 106 149 265 325 615 680 202 205 375 384 384 397 9 14 20 25 24 25 3 0 23 -53 43 -117z m-3272 -855 c250 -311 432 -675 529 -1058 125 -493 73 -981 -141 -1339 -74 -121 -121 -183 -219 -285 -164 -170 -327 -287 -572 -408 -86 -43 -159 -82 -163 -87 -3 -6 -36 22 -72 62 -176 192 -299 380 -367 561 -29 78 -72 265 -81 356 -9 92 10 263 46 410 70 285 177 501 544 1090 238 383 345 591 386 752 7 26 16 48 20 48 4 0 45 -46 90 -102z m1542 -1325 c79 -23 204 -89 252 -134 132 -122 109 -307 -59 -467 -223 -211 -547 -241 -721 -67 -55 54 -72 87 -84 162 -23 142 26 290 129 393 125 125 303 167 483 113z m486 -357 c12 -18 21 -42 21 -53 0 -44 -187 -270 -408 -493 -139 -141 -163 -161 -158 -135 3 17 8 59 11 95 l6 65 107 52 c217 107 350 260 385 443 6 33 12 60 13 60 2 0 12 -15 23 -34z m-419 -762 c-227 -228 -434 -400 -746 -619 -107 -75 -192 -141 -189 -146 4 -5 93 -10 198 -11 l192 -2 -225 -5 -225 -6 -55 -31 c-30 -17 -122 -71 -205 -118 -335 -194 -898 -457 -1305 -609 -498 -186 -1254 -406 -1617 -471 l-33 -5 0 68 0 68 43 7 c82 13 374 78 577 128 272 67 502 132 767 219 180 58 224 76 250 102 17 18 72 97 122 177 50 80 95 152 101 160 12 17 -85 -173 -138 -269 -41 -75 -57 -75 148 1 928 344 1727 814 2330 1371 69 64 127 116 130 117 3 0 -51 -57 -120 -126z m1985 -29 c245 -22 372 -28 602 -29 203 -1 293 -4 293 -12 0 -25 -45 -144 -82 -219 -88 -176 -273 -397 -452 -541 -339 -274 -775 -469 -1177 -528 -123 -18 -381 -21 -495 -5 -298 41 -563 205 -721 446 -80 122 -85 137 -68 214 29 141 103 276 213 391 153 161 438 271 796 308 44 5 239 7 431 5 281 -2 411 -8 660 -30z m-2833 -1044 c140 -36 257 -111 299 -192 28 -56 26 -149 -6 -218 -52 -112 -209 -228 -352 -261 -184 -42 -357 19 -426 150 -27 51 -28 61 -25 150 3 84 7 104 36 162 51 105 146 181 265 213 72 19 121 18 209 -4z m-570 -143 c-21 -40 -43 -88 -50 -105 -9 -28 -16 -33 -44 -33 -46 0 -199 20 -211 27 -7 4 317 178 341 182 1 1 -15 -32 -36 -71z"/></g></svg>
+    <div class="footer-brand">Las Moras Constructora</div>
+    <div class="footer-loc">Zapotiltic, Jalisco, México</div>
+    <a class="footer-site" href="https://www.residenciallasmoras.com" target="_blank" rel="noopener">
+      www.residenciallasmoras.com
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+    <p class="footer-tagline">Tarjeta de presentación digital</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var TEL = "+523222366462";
+  var TEL_DISPLAY = "322 236 6462";
+  var EMAIL = "juan@residenciallasmoras.com";
+  var NAME = "Ing. Juan Cruz Galindo Pérez";
+  var ORG = "Las Moras Constructora";
+  var SITE = "https://www.residenciallasmoras.com";
+
+  // WhatsApp
+  var waMsg = encodeURIComponent("Hola Ing. Juan, vi su tarjeta digital de Las Moras Constructora y me gustaría más información.");
+  document.getElementById("whatsapp-link").href = "https://wa.me/" + TEL.replace("+","") + "?text=" + waMsg;
+
+  // Llamar / correo
+  document.getElementById("call-link").href = "tel:" + TEL;
+  document.getElementById("phone-link").href = "tel:" + TEL;
+  document.getElementById("email-link").href = "mailto:" + EMAIL;
+
+  // vCard
+  var vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:Galindo Pérez;Juan Cruz;Ing.;;",
+    "FN:" + NAME,
+    "ORG:" + ORG,
+    "TEL;TYPE=CELL,VOICE:" + TEL,
+    "EMAIL;TYPE=INTERNET:" + EMAIL,
+    "URL:" + SITE,
+    "ADR;TYPE=WORK:;;Zapotiltic;Jalisco;;;México",
+    "NOTE:Las Moras Constructora — Raíces firmes. Hogares que crecen.",
+    "END:VCARD"
+  ].join("\r\n");
+
+  document.getElementById("save-contact").href = "data:text/vcard;charset=utf-8," + encodeURIComponent(vcard);
+})();
+</script>
+</body>
+</html>
